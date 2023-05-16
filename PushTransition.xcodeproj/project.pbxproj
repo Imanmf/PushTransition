@@ -16,6 +16,12 @@
 		0F2D93C02A13B2B9000FECB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D93BE2A13B2B9000FECB4 /* Main.storyboard */; };
 		0F2D93C22A13B2BB000FECB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D93C12A13B2BB000FECB4 /* Assets.xcassets */; };
 		0F2D93C52A13B2BB000FECB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D93C32A13B2BB000FECB4 /* LaunchScreen.storyboard */; };
+		0F2D93CD2A13B51A000FECB4 /* TransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D93CC2A13B51A000FECB4 /* TransitionType.swift */; };
+		0F2D93D22A13BA5B000FECB4 /* PushTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D93D12A13BA5B000FECB4 /* PushTransitionProtocol.swift */; };
+		0F2D93D42A13BFE7000FECB4 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D93D32A13BFE7000FECB4 /* UIView.swift */; };
+		0F2D93D62A13C25C000FECB4 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D93D52A13C25C000FECB4 /* UINavigationController.swift */; };
+		0F2D93D82A13C279000FECB4 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D93D72A13C279000FECB4 /* UIViewController.swift */; };
+		0F2D93DC2A13F5EA000FECB4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D93DB2A13F5EA000FECB4 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +47,12 @@
 		0F2D93C12A13B2BB000FECB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F2D93C42A13B2BB000FECB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F2D93C62A13B2BB000FECB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F2D93CC2A13B51A000FECB4 /* TransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionType.swift; sourceTree = "<group>"; };
+		0F2D93D12A13BA5B000FECB4 /* PushTransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionProtocol.swift; sourceTree = "<group>"; };
+		0F2D93D32A13BFE7000FECB4 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		0F2D93D52A13C25C000FECB4 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		0F2D93D72A13C279000FECB4 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		0F2D93DB2A13F5EA000FECB4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 		0F0CC1902A13AFB700510ED2 /* PushTransition */ = {
 			isa = PBXGroup;
 			children = (
+				0F2D93CA2A13B4C6000FECB4 /* Source */,
 				0F0CC1912A13AFB700510ED2 /* PushTransition.h */,
 				0F0CC1922A13AFB700510ED2 /* PushTransition.docc */,
 			);
@@ -109,14 +122,59 @@
 		0F2D93B72A13B2B9000FECB4 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				0F2D93DA2A13C509000FECB4 /* StoryBoards */,
+				0F2D93D92A13C4F3000FECB4 /* ViewControllers */,
 				0F2D93B82A13B2B9000FECB4 /* AppDelegate.swift */,
-				0F2D93BC2A13B2B9000FECB4 /* ViewController.swift */,
-				0F2D93BE2A13B2B9000FECB4 /* Main.storyboard */,
 				0F2D93C12A13B2BB000FECB4 /* Assets.xcassets */,
-				0F2D93C32A13B2BB000FECB4 /* LaunchScreen.storyboard */,
 				0F2D93C62A13B2BB000FECB4 /* Info.plist */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		0F2D93CA2A13B4C6000FECB4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0F2D93CE2A13B5BE000FECB4 /* Extensions+Protocols */,
+				0F2D93CB2A13B4FA000FECB4 /* Models */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0F2D93CB2A13B4FA000FECB4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0F2D93CC2A13B51A000FECB4 /* TransitionType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0F2D93CE2A13B5BE000FECB4 /* Extensions+Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0F2D93D12A13BA5B000FECB4 /* PushTransitionProtocol.swift */,
+				0F2D93D32A13BFE7000FECB4 /* UIView.swift */,
+				0F2D93D52A13C25C000FECB4 /* UINavigationController.swift */,
+				0F2D93D72A13C279000FECB4 /* UIViewController.swift */,
+			);
+			path = "Extensions+Protocols";
+			sourceTree = "<group>";
+		};
+		0F2D93D92A13C4F3000FECB4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F2D93BC2A13B2B9000FECB4 /* ViewController.swift */,
+				0F2D93DB2A13F5EA000FECB4 /* SecondViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0F2D93DA2A13C509000FECB4 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				0F2D93BE2A13B2B9000FECB4 /* Main.storyboard */,
+				0F2D93C32A13B2BB000FECB4 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F2D93D82A13C279000FECB4 /* UIViewController.swift in Sources */,
+				0F2D93D42A13BFE7000FECB4 /* UIView.swift in Sources */,
+				0F2D93CD2A13B51A000FECB4 /* TransitionType.swift in Sources */,
+				0F2D93D62A13C25C000FECB4 /* UINavigationController.swift in Sources */,
+				0F2D93D22A13BA5B000FECB4 /* PushTransitionProtocol.swift in Sources */,
 				0F0CC1932A13AFB700510ED2 /* PushTransition.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F2D93DC2A13F5EA000FECB4 /* SecondViewController.swift in Sources */,
 				0F2D93BD2A13B2B9000FECB4 /* ViewController.swift in Sources */,
 				0F2D93B92A13B2B9000FECB4 /* AppDelegate.swift in Sources */,
 			);
@@ -493,6 +557,7 @@
 		0F0CC1A62A13AFB700510ED2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -508,6 +573,7 @@
 		0F0CC1A72A13AFB700510ED2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
