@@ -14,7 +14,7 @@ You have access to this methods even in views and view controllers directly.
 [Installation](#installation) - [Usage](#usage)
 
 ## Demo
-![demo gif](Gif/GIF.gif)
+<img alt="demo" src="Gif/GIF.gif" width="250">
 
 ## Installation
 
@@ -42,9 +42,9 @@ Before using `PushTransition`, pay attention to the following points:
 
 First things first `import PushTransition`.
 
-###UIViewControllers
+### UIViewControllers
 You can use this protocol globally or just for some specific view controllers.
-####Globally
+#### Globally
 You can use extension in UIViewController:
 ```swift
 extension UIViewController: PushTransition {}
@@ -59,7 +59,7 @@ popViewController(type: .fade)
 //self.popViewController(type: .fade) // if you are in closure
 
 ```
-#####or using a baseViewController
+##### or using a baseViewController
 ```swift
 class BaseViewController: UIViewController, PushTransition {}
 
@@ -67,13 +67,13 @@ class FirstViewController: BaseViewController {}
 ```
 So when you inherit BaseViewController in your final view controllers, you have access to pushViewController and popViewController
 
-####Specific view controller
+#### Specific view controller
 ```swift
 class YourViewController: UIViewController, PushTransition {}
 ```
 You have access `PushTransition` functions just in this view controller.
 
-###UINavigationControllers
+### UINavigationControllers
 You can use `PushTransition` globally or just for some specific navigation controllers
 ```swift
 extension UINavigationController: PushTransition {}
@@ -82,7 +82,7 @@ self.navigationController?.pushViewController(vc, type: .flip) // in view contro
 //pushViewController(vc, type: .flip) // in navigation controller classess
 ```
 
-###UIView
+### UIView
 You can use `PushTransition` in your views, and you can do push or pop directly from a view.
 It's not important that you added your view programmatically or using UI. You just need inherit from `PushTransition`.
 So, don't worry about where are you and what are you doing. When your work finished in UIView codes, You can push or pop even in views, and you don't need the view controller. `PushTransition` will find parent and do push or pop.
