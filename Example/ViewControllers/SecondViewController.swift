@@ -11,12 +11,31 @@ import PushTransition
 class SecondViewController: UIViewController {
 
     var transitionType: TransitionType?
+    var label: UILabel = {
+        let lbl = UILabel()
+        lbl.textColor = .black
+        lbl.text = "press view to pop viewcontroller with transition\nor\npress back button to pop as default."
+        lbl.textAlignment = .center
+        lbl.numberOfLines = 0
+        return lbl
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        setupLabel()
         
+        convertTransitionForPop()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(back))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    /*
+     set transition like back from pervious transition
+     */
+    private func convertTransitionForPop() {
         switch transitionType {
             
         case .moveIn(.fromBottom):
@@ -103,9 +122,14 @@ class SecondViewController: UIViewController {
         default:
             break
         }
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(back))
-        view.addGestureRecognizer(tapGesture)
+    }
+    
+    private func setupLabel() {
+        view.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        label.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
     @objc private func back() {

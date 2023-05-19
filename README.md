@@ -1,16 +1,20 @@
 # PushTransition
 It is simple transition framework using protocol that you can inherit in views, view controllers or navigation controllers.
-So you can choose inherit this protocol Globally or just use in specific view, view  controllers or navigation controllers.
+So you can choose to inherit this protocol Globally or just use in specific view, view  controllers or navigation controllers.
 You can use pushViewController and popViewController and transition works for both. You must specify your transition
 in every single push or pop call. Be aware that this functions need to navigation controller.
 You have access to this methods even in views and view controllers directly.
 
-[![CI Status](https://img.shields.io/travis/15712112/xxxx.svg?style=flat)](https://travis-ci.org/15712112/PushTransition)
-[![Version](https://img.shields.io/cocoapods/v/xxxx.svg?style=flat)](https://cocoapods.org/pods/PushTransition)
-[![License](https://img.shields.io/cocoapods/l/xxxx.svg?style=flat)](https://cocoapods.org/pods/PushTransition)
-[![Platform](https://img.shields.io/cocoapods/p/xxxx.svg?style=flat)](https://cocoapods.org/pods/PushTransition)
+[![Language: Swift 5](https://img.shields.io/badge/language-swift%205-f48041.svg?style=flat)](https://developer.apple.com/swift)
+[![Version](https://img.shields.io/cocoapods/v/PushTransition.svg?style=flat)](http://cocoapods.org/pods/PushTransition)
+[![License: MIT](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/Imanmf/PushTransition/blob/master/LICENSE)
+[![Platform](https://img.shields.io/cocoapods/p/PushTransition.svg?style=flat)](https://cocoapods.org/pods/PushTransition)
+[![GitHub tag](https://img.shields.io/github/release/Imanmf/PushTransition.svg)]()
 
 [Installation](#installation) - [Usage](#usage)
+
+## Demo
+![demo gif](Gif/GIF.gif)
 
 ## Installation
 
@@ -27,6 +31,12 @@ Add `pod 'PushTransition'` to your `Podfile` and run `pod install`.
 target 'MyApp'
 pod 'PushTransition'
 ```
+
+## Important
+Before using `PushTransition`, pay attention to the following points:
+- `PushTransition` works with navigation controller, So you need navigation controller.
+- You need to inherit from `PushTransition` as Usage section Instructions below.
+- As mentioned earlier, you may need ```pod repo update``` or ```pod install --repo-update``` to install.
 
 ## Usage
 
@@ -73,9 +83,9 @@ self.navigationController?.pushViewController(vc, type: .flip) // in view contro
 ```
 
 ###UIView
-You can use `PushTransition` in your views and you can do push or pop directly from a view.
+You can use `PushTransition` in your views, and you can do push or pop directly from a view.
 It's not important that you added your view programmatically or using UI. You just need inherit from `PushTransition`.
-So, don't worry about where are you and what are you doing. When your work finished in UIView codes, You can push or pop even in views and you don't need view controller. `PushTransition` will find parent and do push or pop.
+So, don't worry about where are you and what are you doing. When your work finished in UIView codes, You can push or pop even in views, and you don't need the view controller. `PushTransition` will find parent and do push or pop.
 
 ```swift
 class YourView: UIView, PushTransition {
@@ -117,7 +127,7 @@ To run the example project, clone the repo, and run the `Example` Scheme
 ## Author
 
 <a href="https://github.com/Imanmf">
-  <img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/15712112?s=400&u=04b439452c2fae517bd6b6febb970b067ffcae04&v=4" width="70px">
+  <img alt="avatar" style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/15712112?s=400&u=04b439452c2fae517bd6b6febb970b067ffcae04&v=4" width="70px">
 </a>
 
 Iman Mosayebi, iman.mosayyebi@gmail.com

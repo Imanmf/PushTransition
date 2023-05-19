@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "PushTransition"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.0"
   spec.summary      = "A simple framework that help you to transition between view controllers in push method."
 
   spec.description  = <<-DESC
